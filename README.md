@@ -1,6 +1,7 @@
 # NOTE
 You can use it anyway and edit.
 But please leave a reference.
+/n
 <July 26, 2020>
 Don't actually use the OLD folder files I found totally wrong equations in backpropagation.
 But if you want you can reference the matrix algorithm; they are working perfectly.
