@@ -1,6 +1,7 @@
 # NOTE
-You can use it anyway and edit.
-But please leave a reference.
+this is made by USG
+You can use it for any non-commercial purpose.
+Please leave a reference.
 
 
 <July 26, 2020>
