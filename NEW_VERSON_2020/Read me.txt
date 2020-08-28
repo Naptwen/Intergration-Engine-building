@@ -35,7 +35,7 @@ void main()
 	myNeuron.ADD_LAYER(10, ReLU); //THE THIRD IS HIDDEN
 	myNeuron.ADD_LAYER(4, NONE); //THE LAST IS OUTPUT LAYER
 	myNeuron.W_INIT(HENORM);
-	myNeuron.LEARN_SET(0.9, 0.0001, MEAN, NEST);  //SETUP 0.9 velocity, 0.0005 learning rate, Mean square error check, Nesterov optimizaer
+	myNeuron.LEARN_SET(0.9, 0.0001, MEAN, NEST);  //SETUP 0.9 velocity, 0.0001 learning rate, Mean square error check, Nesterov optimizaer
 	myNeuron.INPUT(input, 10); //SETUP INPUT DATA
 	
 	while (true) 
