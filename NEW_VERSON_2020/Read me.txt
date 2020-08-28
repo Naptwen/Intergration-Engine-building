@@ -18,7 +18,8 @@ If you want to check license pls read Licence.txt
 9. Back Propagation 
 
 *******************************************BASIC Example******************************************************
-#include <USG_NEURON_BLOCK>
+#pragma comment (lib, "usg_neuron_2020.lib")
+#include <UNEURONF.h>
 
 void main()
 {
