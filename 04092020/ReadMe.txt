@@ -1,3 +1,4 @@
+This folder is the my first basic algorithm of the c++ engine program
 The functions
 1.BMP loader
 2.BMP creater from Canvas
