@@ -1,0 +1,51 @@
+Welcome to My Neural network software.
+This documnet includes what is updated.
+If you want to check license pls read Licence.txt
+
+*08-28-2020
+1. Update OMP algorithm for the each neural network, to protect data override, the matrix algorithm is not applied the OMP
+2. Update Visible annotation for each functino of neural block
+
+********************HOW TO USE**********************************
+1. Create NEURON_BLOCK with specific type (I recommand float)
+2. First Add input layer
+3. Add hidden layer 
+4. Add output layer
+5. Setting learn option
+6. Input data
+7. Ouput data
+8. Checking the error
+9. Back Propagation 
+
+*******************************************BASIC Example******************************************************
+#include <USG_NEURON_BLOCK>
+
+void main()
+{
+  //SET UP DATA
+  float[10] input = {1,2,3,4,5,6,7,8,9,10};
+  float[4] target = {0.2,0.3,0.4,0.5}
+  float[4] output = {0,0,0,0};
+  
+  //SET UP LAYER
+  NEURON_BLOCK<float> myNeuron;
+  myNeuron.ADD_LAYER(10,NONE); //THE FIRST LAYER IS INPUT LAYER WITH NO ACTIVATION
+  myNeuron.ADD_LAYER(12, ReLU); //THE SECON IS HIDDEN
+  myNeuron.ADD_LAYER(8,  ReLU); //THE THIRD IS HIDDEN
+  myNeuron.ADD_LAYER(4, NONE); //THE LAST IS OUTPUT LAYER
+  myNeuron.LEARN_SET(0.9, 0.0005, MEAN, NEST); //SETUP THE LEARNING METHODS, 0.9 velocity, 0.0005 learning rate, Mean square error check, Nesterov optimizaer
+  myNeuron.INPUT(input, 10); //SETUP INPUT DATA
+  
+  //LEARNING 
+  while(true)
+  {
+      myNeuron.CPU_RUN(true); // or CUDA_RUN(myNeuron, true); //RUN THE NEURAL NETWORK
+      double error = myNeuron.LOSS_CHECK(target); //CHECK THE ERROR VALUE HOW FAR FROM TARGET VALUE
+      if(error < 0.001) //IF IT IS LESS THAN 0.001 
+        break;
+      printf("The  error = %f\n",error); //SHOW ERROR VALUE
+      myNeuron.CPU_BACK_PROPA(output); //or GPU_BACK_PROPA(myNeuron, target); //RUN BACK PROPAGATION
+  }
+  myNeuron.OUT_PUT(output , 4); //GET OURPUT DATA FROM NEURON
+  printf("The neuron suggestes = {%f, %f, %f, %f}\n", output[0],output[1],output[2],output[3]}; //SHOWING THE NEURON DATA
+}
