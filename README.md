@@ -7,7 +7,7 @@ Please leave a reference.
 I upload the new version of the neural network structre lib and dll file(NEW VERSION 2020 folder)
 you can download the folder and create your own neural network.
 The newversion offer the float data type.
-I wrote the how to use the algorithm on Read me.txt 
+I wrote how to use the algorithm on Read me.txt 
 The next version will be released with the reinforcement algorithm.
 
 <July 26, 2020>
