@@ -29,7 +29,7 @@ void main()
 	float output[4] = { 0,0,0,0 };
 
   	//SET UP LAYER
-	NEURON_BLOCK<float> myNeuron ;
+	NEURON_BLOCKF myNeuron ;
 	myNeuron.ADD_LAYER(10, NONE); //THE FIRST LAYER IS INPUT LAYER WITH NO ACTIVATION
 	myNeuron.ADD_LAYER(10, ReLU); //THE SECON IS HIDDEN
 	myNeuron.ADD_LAYER(10, ReLU); //THE THIRD IS HIDDEN
