@@ -5,7 +5,7 @@ If you want to check license pls read Licence.txt
 *08-28-2020
 1. Update OMP algorithm for the each neural network, to protect data override, the matrix algorithm is not applied the OMP
 2. Update Visible annotation for each functino of neural block
-
+3. This version only offers the float type (the prime version offers any types)
 ********************HOW TO USE**********************************
 1. Create NEURON_BLOCK with specific type (I recommand float)
 2. First Add input layer
