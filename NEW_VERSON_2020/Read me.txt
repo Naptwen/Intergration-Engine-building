@@ -43,7 +43,7 @@ void main()
 		myNeuron.CPU_RUN(true);//CUDA_RUN(&myNeuron, true);
 		myNeuron.OUTPUT(output, 4);			
 		double error = myNeuron.LOSS_CHECK(target);
-		if (error < 0.01) //IF IT IS LESS THAN 0.001 
+		if (error < 0.01) //IF IT IS LESS THAN 0.01 
 			break;
 		std::printf("error %g\n", error);
 		myNeuron.CPU_BACK_PROPA(target);// GPU_BACK_PROPA(&myNeuron, target);		
